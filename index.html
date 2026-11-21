@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal CV and developer portfolio" />
+    <title>reklina | Personal Portfolio</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101a2b'/%3E%3Ctext x='32' y='42' font-size='28' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%2365e2e0'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E"
+    />
+    <script>
+      // Apply the saved theme before the page paints (prevents a flash)
+      try {
+        document.documentElement.setAttribute(
+          "data-theme",
+          localStorage.getItem("theme") === "light" ? "light" : "dark",
+        );
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Khmer:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="#home"
+          ><span class="brand-mark">&lt;/&gt;</span>
+          <span>My<span class="accent">Portfolio</span></span></a
+        >
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+          <button
+            class="theme-btn"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to light mode"
+          >
+            ☀️
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section container" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">
+            <span class="status-dot"></span
+            ><span>AVAILABLE FOR OPPORTUNITIES</span>
+          </p>
+          <p class="hello">Hello, I'm</p>
+          <h1>Rek <span class="gradient-text">Lina</span></h1>
+          <h2>IT Student &amp; Aspiring Developer</h2>
+          <p class="hero-description">
+            I enjoy building websites, learning new technologies, and solving
+            computer-related problems. Explore my skills and projects below.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore My Work ↗</a>
+            <button class="btn btn-outline" id="downloadCv" type="button">
+              <span>Download CV</span> ↓
+            </button>
+          </div>
+          <div class="social-links">
+            <a href="https://t.me/Si_Cambo" target="_blank" rel="noopener"
+              >Telegram ↗</a
+            >
+            <a href="mailto:reklina42@gmail.com">Email ↗</a>
+            <a href="#contact">Contact me ↗</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="profile-card">
+            <div class="profile-top">
+              <span></span><span></span><span></span><small>profile.exe</small>
+            </div>
+            <!-- PROFILE PHOTO: save your photo in this folder as "profile.jpg" (or change the src below). If the file is missing, the emoji is shown instead. -->
+            <div class="avatar-placeholder">
+              <span>👨‍💻</span
+              ><img
+                src="profile.jpg"
+                alt="Profile photo"
+                onerror="this.remove()"
+              />
+            </div>
+            <p class="profile-name">RK LINA</p>
+            <p class="profile-role">IT STUDENT</p>
+            <div class="profile-line"></div>
+            <div class="profile-tags">
+              <span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  alt=""
+                  loading="lazy"
+                />HTML</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  alt=""
+                  loading="lazy"
+                />CSS</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt=""
+                  loading="lazy"
+                />JavaScript</span
+              >
+            </div>
+            <div class="code-decoration">
+              <span>01</span> &lt;code&gt; <b>create_future()</b> &lt;/code&gt;
+            </div>
+          </div>
+          <div class="floating-chip chip-top">✦ Creative thinking</div>
+          <div class="floating-chip chip-bottom">⌘ Always learning</div>
+        </div>
+      </section>
+
+      <section class="section container" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / ABOUT</p>
+          <h2>A little about <span>me</span></h2>
+          <p>A quick introduction to who I am and what I do.</p>
+        </div>
+        <div class="about-grid">
+          <article class="glass-card about-text reveal">
+            <h3>I'm passionate about technology.</h3>
+            <p>
+              I am a third-year Information Technology student at the Royal
+              University of Phnom Penh. I have foundational knowledge of
+              computer hardware and networking, and I enjoy creating practical
+              web projects and troubleshooting technical issues.
+            </p>
+            <p>
+              My goal is to keep improving my technical skills, gain real-world
+              experience, and contribute to useful digital solutions.
+            </p>
+          </article>
+          <div class="about-facts reveal">
+            <div class="fact-card">
+              <span class="fact-icon">🎓</span>
+              <div>
+                <small>EDUCATION</small><strong>RUPP</strong>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="fact-card">
+              <span class="fact-icon">💻</span>
+              <div>
+                <small>FOCUS</small><strong>Web &amp; IT Support</strong>
+                <p>Learning by building</p>
+              </div>
+            </div>
+            <div class="fact-card">
+              <span class="fact-icon">🌱</span>
+              <div>
+                <small>MINDSET</small><strong>Always learning</strong>
+                <p>Curious and responsible</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="skills">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / SKILLS</p>
+          <h2>My <span>skills</span></h2>
+          <p>Technologies and practical skills I'm developing.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="glass-card skill-card reveal">
+            <div class="skill-icon">🌐</div>
+            <h3>Web Development</h3>
+            <div class="skill-list">
+              <span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  alt=""
+                  loading="lazy"
+                />HTML5</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  alt=""
+                  loading="lazy"
+                />CSS3</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt=""
+                  loading="lazy"
+                />JavaScript</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  alt=""
+                  loading="lazy"
+                />React</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                  alt=""
+                  loading="lazy"
+                />PHP</span
+              >
+            </div>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <div class="skill-icon">⌨️</div>
+            <h3>Programming</h3>
+            <div class="skill-list">
+              <span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+                  alt=""
+                  loading="lazy"
+                />C</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                  alt=""
+                  loading="lazy"
+                />C++</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                  alt=""
+                  loading="lazy"
+                />C#</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                  alt=""
+                  loading="lazy"
+                />Java</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt=""
+                  loading="lazy"
+                />JavaScript</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                  alt=""
+                  loading="lazy"
+                />Python</span
+              ><span
+                ><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                  alt=""
+                  loading="lazy"
+                />PHP</span
+              >
+            </div>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <div class="skill-icon">🖥️</div>
+            <h3>IT Support</h3>
+            <div class="skill-list">
+              <span>Hardware</span><span>Windows</span
+              ><span>Troubleshooting</span>
+            </div>
+          </article>
+          <article class="glass-card skill-card reveal">
+            <div class="skill-icon">🔌</div>
+            <h3>Networking</h3>
+            <div class="skill-list">
+              <span>Network Setup</span><span>Basic Networking</span
+              ><span>Maintenance</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 / PROJECTS</p>
+          <h2>Selected <span>projects</span></h2>
+          <p>Some projects I've worked on while learning and practicing.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-art art-blue">
+              <span class="art-symbol">🛒</span
+              ><span class="art-label">01 / E-COMMERCE</span>
+              <div class="mini-window">
+                <i></i><i></i><i></i><b>PhumCode</b>
+                <div class="mini-products">
+                  <span>▰</span><span>▱</span><span>▰</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>WEB DEVELOPMENT</span><span>2026</span>
+              </div>
+              <h3>PhumCode Electronic Store</h3>
+              <p>
+                An online electronics store concept with product browsing, cart,
+                user login, and order flow.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                class="project-link"
+                href="#"
+                aria-label="Add project link later"
+                >Project details ↗</a
+              >
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-purple">
+              <span class="art-symbol">🏫</span
+              ><span class="art-label">02 / MANAGEMENT</span>
+              <div class="dashboard-art">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>FRONTEND PROJECT</span><span>2026</span>
+              </div>
+              <h3>High School Management System</h3>
+              <p>
+                A front-end management dashboard concept for organizing student,
+                teacher, attendance, and score records.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                class="project-link"
+                href="#"
+                aria-label="Add project link later"
+                >Project details ↗</a
+              >
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-orange">
+              <span class="art-symbol">☕</span
+              ><span class="art-label">03 / BUSINESS WEBSITE</span>
+              <div class="coffee-art">
+                <b>KIRI</b><span>COFFEE</span><i>☕</i>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>WEB DESIGN</span><span>2026</span>
+              </div>
+              <h3>KIRI Coffee Website</h3>
+              <p>
+                A coffee shop website concept featuring a menu, product
+                filtering, and a shopping cart interface.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                class="project-link"
+                href="#"
+                aria-label="Add project link later"
+                >Project details ↗</a
+              >
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-green">
+              <span class="art-symbol">✅</span
+              ><span class="art-label">04 / WEB APP</span>
+              <div class="todo-art">
+                <b>TaskFlow</b>
+                <div class="todo-row"><i></i><span></span></div>
+                <div class="todo-row"><i></i><span></span></div>
+                <div class="todo-row"><i></i><span></span></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>REACT PROJECT</span><span>2026</span>
+              </div>
+              <h3>TaskFlow To-Do App</h3>
+              <p>
+                A to-do list app built with React where users can add, edit,
+                complete, and filter daily tasks.
+              </p>
+              <div class="project-tags">
+                <span>React</span><span>JavaScript</span><span>CSS</span>
+              </div>
+              <a
+                class="project-link"
+                href="#"
+                aria-label="Add project link later"
+                >Project details ↗</a
+              >
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-pink">
+              <span class="art-symbol">📚</span
+              ><span class="art-label">05 / DESKTOP APP</span>
+              <div class="library-art">
+                <span></span><span></span><span></span><span></span
+                ><span></span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>JAVA PROJECT</span><span>2026</span>
+              </div>
+              <h3>Library Management System</h3>
+              <p>
+                A Java application for managing books, members, and borrowing
+                records with search and return tracking.
+              </p>
+              <div class="project-tags">
+                <span>Java</span><span>OOP</span><span>File Storage</span>
+              </div>
+              <a
+                class="project-link"
+                href="#"
+                aria-label="Add project link later"
+                >Project details ↗</a
+              >
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-teal">
+              <span class="art-symbol">🔐</span
+              ><span class="art-label">06 / BACKEND</span>
+              <div class="login-art">
+                <b>Login</b><span></span><span></span><em></em>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>PHP PROJECT</span><span>2026</span>
+              </div>
+              <h3>Member Login &amp; Blog System</h3>
+              <p>
+                A PHP website with user registration, secure login, and a simple
+                blog where members can post articles.
+              </p>
+              <div class="project-tags">
+                <span>PHP</span><span>HTML</span><span>CSS</span>
+              </div>
+              <a
+                class="project-link"
+                href="#"
+                aria-label="Add project link later"
+                >Project details ↗</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="experience">
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 / EXPERIENCE</p>
+          <h2>Work <span>experience</span></h2>
+          <p>
+            Hands-on experience I've gained in IT support and web development.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span><small>YEAR — YEAR</small>
+            <h3>Web Front-End Developer · At company ABA Bank</h3>
+            <p>
+              Built and maintained responsive web pages using HTML, CSS,
+              JavaScript, and React. Worked with the team to turn designs into
+              clean, user-friendly interfaces and fix front-end bugs.
+            </p>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span><small>YEAR — YEAR</small>
+            <h3>IT Support · At company ABA Bank</h3>
+            <p>
+              Provided technical support for computers and networks: installing
+              Windows and software, troubleshooting hardware issues, setting up
+              network connections, and helping staff solve everyday IT problems.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="education">
+        <div class="section-heading reveal">
+          <p class="eyebrow">05 / EDUCATION</p>
+          <h2>My <span>education</span></h2>
+          <p>My learning journey so far.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span><small>2025 — PRESENT</small>
+            <h3>Royal University of Phnom Penh</h3>
+            <p>
+              Bachelor's Degree in Information Technology — Third-year student.
+            </p>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span><small>ONGOING</small>
+            <h3>Self-learning &amp; Personal Projects</h3>
+            <p>
+              Practicing web development, programming, computer maintenance, and
+              networking fundamentals.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="contact">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">06 / CONTACT</p>
+          <h2>Let's build something <span>great.</span></h2>
+          <p>
+            Have an opportunity, a project idea, or just want to connect? Feel
+            free to contact me.
+          </p>
+          <a
+            class="btn btn-primary"
+            href="https://t.me/Si_Cambo"
+            target="_blank"
+            rel="noopener"
+            >Message Me on Telegram ↗</a
+          >
+          <div class="contact-details">
+            <span>✉ reklina42@gmail.com</span><span>✈ Telegram: @Si_Cambo</span
+            ><span>⌖ Phnom Penh, Cambodia</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <a class="brand" href="#home"
+        ><span class="brand-mark">&lt;/&gt;</span> My<span class="accent"
+          >Portfolio</span
+        ></a
+      >
+      <p>© <span id="year"></span> reklina. Built with care.</p>
+      <a href="#home" class="back-top">Back to top ↑</a>
+    </footer>
+
+    <!-- This clean CV layout is shown only when printing / saving as PDF. -->
+    <section class="print-cv" id="printCv">
+      <h1>Your Name</h1>
+      <h2>IT Student | Aspiring Developer</h2>
+      <p>Phnom Penh, Cambodia · reklina42@gmail.com · Telegram: @Si_Cambo</p>
+      <hr />
+      <h3>PROFILE</h3>
+      <p>
+        Third-year Information Technology student at the Royal University of
+        Phnom Penh. Foundational knowledge of computer hardware and networking,
+        with an interest in web development and technical support.
+      </p>
+      <h3>EDUCATION</h3>
+      <p>
+        <b>Royal University of Phnom Penh</b><br />Bachelor's Degree in
+        Information Technology · 2025–Present
+      </p>
+      <h3>TECHNICAL SKILLS</h3>
+      <p>
+        C, C++, C#, Java, Python, PHP, HTML, CSS, JavaScript, React, Computer
+        Hardware, Basic Networking, Windows Troubleshooting
+      </p>
+      <h3>EXPERIENCE</h3>
+      <p>
+        <b>Web Front-End Developer</b> — Your Company (YEAR–YEAR)<br />Built
+        responsive web pages with HTML, CSS, JavaScript, and React.
+      </p>
+      <p>
+        <b>IT Support</b> — Your Company(YEAR–YEAR)<br />Computer and network
+        troubleshooting, Windows setup, and user support.
+      </p>
+      <h3>PROJECTS</h3>
+      <p>
+        <b>PhumCode Electronic Store:</b> E-commerce website concept with
+        product browsing, cart, login, and order flow.
+      </p>
+      <p>
+        <b>High School Management System:</b> Front-end dashboard for student,
+        teacher, attendance, and score records.
+      </p>
+      <p>
+        <b>KIRI Coffee Website:</b> Coffee shop website concept with menu,
+        filtering, and cart interface.
+      </p>
+      <h3>CAREER OBJECTIVE</h3>
+      <p>
+        To continue developing my IT skills, gain practical experience, and
+        contribute to a professional team.
+      </p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
